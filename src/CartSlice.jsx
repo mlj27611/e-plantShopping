@@ -6,15 +6,16 @@ export const CartSlice = createSlice({
     items: [], // Initialize items as an empty array
   },
   reducers: {
-    addItem: (state, action) => {
+    addItem: (state, action) => {dispatch(updateQuantity({ name: item.name, quantity: item.quantity + 1 }));
     
     },
-    removeItem: (state, action) => {
+    removeItem: (state, action) => {state.items = state.items.filter(item => item.name !== action.payload);
     },
     updateQuantity: (state, action) => {
 
     
     },
+  
   },
 });
 

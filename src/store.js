@@ -5,4 +5,9 @@ import cartReducer from './CartSlice';
         cart: cartReducer,
     },
 });
+const { name, quantity } = action.payload;
+const itemToUpdate = state.items.find(item => item.name === name);
+if (itemToUpdate) {
+  itemToUpdate.quantity = quantity;
+}
 export default store
