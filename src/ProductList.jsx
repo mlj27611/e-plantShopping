@@ -253,12 +253,9 @@ const handleAddToCart = (product) => {
     e.preventDefault();
     setShowCart(false);
   };
-  const { name, quantity } = action.payload;
-const itemToUpdate = state.items.find(item => item.name === name);
-if (itemToUpdate) {
-  itemToUpdate.quantity = quantity;
+  
 
-}
+
    
     return (
         <div>
